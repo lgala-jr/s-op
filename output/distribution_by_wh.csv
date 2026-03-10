@@ -1,0 +1,8 @@
+wh_name,dispense_method,fill_count,order_qty_sum,pct_within_wh_by_fills,pct_within_wh_by_order_qty
+BEYONDRX_AZ,automated,99510,8224605,32.04,24.05
+BEYONDRX_AZ,manual,211113,25962028,67.96,75.93
+BEYONDRX_AZ,other,0,5181,0.0,0.02
+BEYONDRX_OH,automated,289755,30726294,78.01,77.83
+BEYONDRX_OH,manual,81691,8745893,21.99,22.15
+BEYONDRX_OH,other,0,8374,0.0,0.02
+OHIO,other,0,81876,,100.0

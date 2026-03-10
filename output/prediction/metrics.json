@@ -1,0 +1,21 @@
+{
+  "accuracy": 0.9661111502972087,
+  "macro_f1": 0.9738856708263772,
+  "weighted_f1": 0.9658407889253652,
+  "n_train": 623801,
+  "n_test": 155951,
+  "features": [
+    "wh_name",
+    "is_compound",
+    "unit_of_measure",
+    "level_3",
+    "is_rx",
+    "product_type",
+    "level_2"
+  ],
+  "classes": [
+    "automated",
+    "manual",
+    "other"
+  ]
+}

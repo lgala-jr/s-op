@@ -1,0 +1,10 @@
+# Feature selection output
+# Use these features for summary stats and model training
+
+wh_name
+is_compound
+unit_of_measure
+level_3
+is_rx
+product_type
+level_2

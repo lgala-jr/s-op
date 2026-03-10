@@ -1,0 +1,44 @@
+level,product_type,wh_name,dispense_method,pct_of_volume,fill_count,order_qty_sum
+1,GLP,BEYONDRX_AZ,manual,100.0,140,1260
+1,GLP,BEYONDRX_OH,manual,100.0,8965,74710
+1,Gummy,BEYONDRX_OH,manual,100.0,9940,1398420
+1,Meal Kit,OHIO,other,100.0,0,3159
+1,Multis Orders,BEYONDRX_AZ,automated,34.9,10158,2825881
+1,Multis Orders,BEYONDRX_AZ,manual,65.1,26980,5270500
+1,Multis Orders,BEYONDRX_OH,automated,92.96,47971,11288716
+1,Multis Orders,BEYONDRX_OH,manual,7.04,9020,855120
+1,Non-Rx,OHIO,other,100.0,0,78717
+1,Rx,BEYONDRX_AZ,automated,83.67,89350,5398634
+1,Rx,BEYONDRX_AZ,manual,16.25,12228,1048625
+1,Rx,BEYONDRX_AZ,other,0.08,0,5181
+1,Rx,BEYONDRX_OH,automated,95.79,172277,11387828
+1,Rx,BEYONDRX_OH,manual,4.14,6602,492599
+1,Rx,BEYONDRX_OH,other,0.07,0,8374
+1,Tablet,BEYONDRX_AZ,automated,0.0,2,90
+1,Tablet,BEYONDRX_AZ,manual,100.0,147299,15608923
+1,Tablet,BEYONDRX_OH,automated,75.67,69507,8049750
+1,Tablet,BEYONDRX_OH,manual,24.33,26625,2588024
+1,Topical,BEYONDRX_AZ,manual,100.0,24466,4032720
+1,Topical,BEYONDRX_OH,manual,100.0,20539,3337020
+2,GLP,(all),manual,100.0,9105,75970
+2,Gummy,(all),manual,100.0,9940,1398420
+2,Meal Kit,(all),other,100.0,0,3159
+2,Multis Orders,(all),automated,69.74,58129,14114597
+2,Multis Orders,(all),manual,30.26,36000,6125620
+2,Non-Rx,(all),other,100.0,0,78717
+2,Rx,(all),automated,91.52,261627,16786462
+2,Rx,(all),manual,8.4,18830,1541224
+2,Rx,(all),other,0.07,0,13555
+2,Tablet,(all),automated,30.67,69509,8049840
+2,Tablet,(all),manual,69.33,173924,18196947
+2,Topical,(all),manual,100.0,45005,7369740
+3,(all),BEYONDRX_AZ,automated,24.05,99510,8224605
+3,(all),BEYONDRX_AZ,manual,75.93,211113,25962028
+3,(all),BEYONDRX_AZ,other,0.02,0,5181
+3,(all),BEYONDRX_OH,automated,77.83,289755,30726294
+3,(all),BEYONDRX_OH,manual,22.15,81691,8745893
+3,(all),BEYONDRX_OH,other,0.02,0,8374
+3,(all),OHIO,other,100.0,0,81876
+4,(all),(all),automated,52.81,389265,38950899
+4,(all),(all),manual,47.06,292804,34707921
+4,(all),(all),other,0.13,0,95431

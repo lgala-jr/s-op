@@ -1,0 +1,17 @@
+# Large output files (exceed GitHub 100MB limit)
+output/base_data.csv
+output/verify_task_productivity.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

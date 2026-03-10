@@ -1,0 +1,26 @@
+  SELECT DISTINCT
+  product_rxcui as product_id
+  , dispense_method
+  , COALESCE(order_qty, 1) AS order_qty 
+  , date(order_status_datetime) as order_status_date
+  ,CASE 
+    WHEN product_rxcui LIKE '%gummy%' THEN 'Gummy'
+    WHEN lower(level_2) LIKE '%injectable%' THEN 'GLP'
+    WHEN (is_multi AND lower(level_2) LIKE '%weight loss%' AND is_rx) THEN 'Multis Orders'
+    WHEN (lower(level_2) LIKE '%weight loss%' AND NOT is_rx) THEN 'Meal Kit'
+    WHEN product_rxcui LIKE '%cream%' THEN 'Cream'
+    WHEN (is_compound AND COALESCE(nndc.unit_of_measure, ndc.unit_of_measure) = 'MILLILITER' AND (lower(SKU) NOT LIKE '%pill%%' AND lower(SKU) NOT LIKE '%chew%')) THEN 'Topical'
+    WHEN (is_compound AND lower(level_3) NOT LIKE '%non-rx%') THEN 'Tablet'
+    WHEN (is_rx AND lower(level_3) NOT LIKE '%non-rx%') THEN 'Rx'
+    ELSE 'Non-Rx' END 
+    AS product_type
+  , ord.*
+  FROM `clubroom-prod.datamarts.order_lifecycle_nrt` as ord
+  LEFT OUTER JOIN `clubroom-prod.datamarts.pms_non_phi_non_ndc_product_catalog` nndc USING (item_number)
+  LEFT JOIN (SELECT DISTINCT item_number, unit_of_measure FROM `clubroom-prod.datamarts.pms_non_phi_ndc_product_catalog`) ndc USING (item_number)
+  where 1=1
+  and last_dispatched_at >= TIMESTAMP(DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 6 MONTH), MONTH))
+  and last_dispatched_at < TIMESTAMP(DATE_TRUNC(CURRENT_DATE(), MONTH))
+  and date(order_status_datetime) >= DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 6 MONTH), MONTH)
+  and date(order_status_datetime) <= LAST_DAY(DATE_SUB(CURRENT_DATE(), INTERVAL 1 MONTH))
+  and wh_name in ('OHIO', 'BEYONDRX_OH', 'BEYONDRX_AZ')

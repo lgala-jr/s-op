@@ -1,0 +1,4 @@
+cut_dimension,dispense_method,fill_count,order_qty_sum,pct_of_total_fills,pct_of_total_order_qty
+Overall,automated,389265,38950899,57.07,52.81
+Overall,manual,292804,34707921,42.93,47.06
+Overall,other,0,95431,0.0,0.13

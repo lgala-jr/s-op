@@ -1,0 +1,13 @@
+dimension,product_type,dispense_method,fill_count,order_qty_sum,pct_within_product_type_by_fills,pct_within_product_type_by_order_qty
+product_type,GLP,manual,9105,75970,100.0,100.0
+product_type,Gummy,manual,9940,1398420,100.0,100.0
+product_type,Meal Kit,other,0,3159,,100.0
+product_type,Multis Orders,automated,58129,14114597,61.75,69.74
+product_type,Multis Orders,manual,36000,6125620,38.25,30.26
+product_type,Non-Rx,other,0,78717,,100.0
+product_type,Rx,automated,261627,16786462,93.29,91.52
+product_type,Rx,manual,18830,1541224,6.71,8.4
+product_type,Rx,other,0,13555,0.0,0.07
+product_type,Tablet,automated,69509,8049840,28.55,30.67
+product_type,Tablet,manual,173924,18196947,71.45,69.33
+product_type,Topical,manual,45005,7369740,100.0,100.0

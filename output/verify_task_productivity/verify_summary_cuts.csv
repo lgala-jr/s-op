@@ -1,0 +1,16 @@
+cut,dimension,value,n,mean_min,median_min,p25,p75,p90,bimodal
+Overall,—,—,1491216,0.2,0.1,0.05,0.17,0.35,True
+task,task,06 Preverify,650903,0.23,0.07,0.03,0.17,0.48,True
+task,task,10 Pending Verify,840313,0.18,0.1,0.07,0.17,0.3,True
+task_mode,task_mode,Automated,1141,0.02,0.02,0.02,0.02,0.02,False
+task_mode,task_mode,Manual,1490075,0.2,0.1,0.05,0.17,0.35,True
+wh_name,wh_name,OH,537837,0.19,0.08,0.05,0.17,0.35,True
+wh_name,wh_name,AZ,953379,0.21,0.1,0.05,0.17,0.37,True
+task_mode × task,mode_task,Automated - 10 Pending Verify,101,0.02,0.02,0.02,0.02,0.02,False
+task_mode × task,mode_task,Automated - 06 Preverify,1040,0.02,0.02,0.02,0.02,0.02,False
+task_mode × task,mode_task,Manual - 10 Pending Verify,840212,0.18,0.1,0.07,0.17,0.3,True
+task_mode × task,mode_task,Manual - 06 Preverify,649863,0.23,0.07,0.03,0.17,0.48,True
+task × wh_name,task_wh,10 Pending Verify | AZ,642861,0.19,0.1,0.07,0.17,0.3,True
+task × wh_name,task_wh,06 Preverify | OH,340385,0.21,0.07,0.03,0.17,0.42,True
+task × wh_name,task_wh,06 Preverify | AZ,310518,0.25,0.07,0.03,0.17,0.57,True
+task × wh_name,task_wh,10 Pending Verify | OH,197452,0.16,0.1,0.07,0.17,0.3,True
