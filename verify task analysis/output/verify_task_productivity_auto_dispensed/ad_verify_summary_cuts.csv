@@ -1,0 +1,25 @@
+cut,dimension,value,n,mean_min,median_min,p25,p75,p90,bimodal
+Overall,—,—,1545312,0.2,0.1,0.05,0.17,0.35,True
+task,task,10 Pending Verify,871243,0.18,0.1,0.07,0.17,0.3,True
+task,task,06 Preverify,674069,0.23,0.07,0.03,0.17,0.48,True
+task_mode,task_mode,Auto Dispensed,547879,0.21,0.08,0.05,0.17,0.38,True
+task_mode,task_mode,Manual,996293,0.2,0.1,0.05,0.17,0.35,True
+task_mode,task_mode,Automated,1140,0.02,0.02,0.02,0.02,0.02,False
+auto_dispensed,auto_dispensed,Yes,547879,0.21,0.08,0.05,0.17,0.38,True
+auto_dispensed,auto_dispensed,No,997433,0.2,0.1,0.05,0.17,0.35,True
+wh_name,wh_name,AZ,987236,0.21,0.1,0.05,0.17,0.37,True
+wh_name,wh_name,OH,558076,0.19,0.08,0.05,0.17,0.35,True
+task_mode × task,mode_task,Auto Dispensed - 10 Pending Verify,217293,0.19,0.1,0.08,0.17,0.3,True
+task_mode × task,mode_task,Auto Dispensed - 06 Preverify,330586,0.22,0.07,0.03,0.18,0.47,True
+task_mode × task,mode_task,Manual - 10 Pending Verify,653878,0.18,0.1,0.07,0.17,0.3,True
+task_mode × task,mode_task,Manual - 06 Preverify,342415,0.23,0.07,0.03,0.17,0.5,True
+task_mode × task,mode_task,Automated - 10 Pending Verify,72,0.02,0.02,0.02,0.02,0.02,False
+task_mode × task,mode_task,Automated - 06 Preverify,1068,0.02,0.02,0.02,0.02,0.02,False
+auto_dispensed × task,auto_task,Auto Disp Yes - 10 Pending Verify,217293,0.19,0.1,0.08,0.17,0.3,True
+auto_dispensed × task,auto_task,Auto Disp Yes - 06 Preverify,330586,0.22,0.07,0.03,0.18,0.47,True
+auto_dispensed × task,auto_task,Auto Disp No - 10 Pending Verify,653950,0.18,0.1,0.07,0.17,0.3,True
+auto_dispensed × task,auto_task,Auto Disp No - 06 Preverify,343483,0.23,0.07,0.03,0.17,0.5,True
+task × wh_name,task_wh,10 Pending Verify | AZ,666425,0.19,0.1,0.07,0.17,0.3,True
+task × wh_name,task_wh,06 Preverify | OH,353258,0.21,0.07,0.03,0.17,0.42,True
+task × wh_name,task_wh,06 Preverify | AZ,320811,0.25,0.07,0.03,0.17,0.57,True
+task × wh_name,task_wh,10 Pending Verify | OH,204818,0.16,0.1,0.07,0.17,0.3,True

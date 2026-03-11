@@ -1,6 +1,7 @@
 # Large output files (exceed GitHub 100MB limit)
 output/base_data.csv
 output/verify_task_productivity.csv
+output/verify_task_productivity_auto_dispensed.csv
 
 # Python
 __pycache__/

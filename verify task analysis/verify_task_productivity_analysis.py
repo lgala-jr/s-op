@@ -179,6 +179,45 @@ def _plot_manual_first_minute_breakdown(df: pd.DataFrame, duration: pd.Series) -
     return out
 
 
+def _plot_topline_counts_by_task_method_warehouse(df: pd.DataFrame) -> Path | None:
+    """
+    Topline counts bar chart by Task, Task Method, and Warehouse.
+    Grouped bars: Task × Warehouse on x-axis, Task Method (Automated/Manual) as hue.
+    """
+    if "task_mode" not in df.columns or "wh_name" not in df.columns or "task" not in df.columns:
+        return None
+    counts = (
+        df.groupby(["task", "task_mode", "wh_name"])
+        .size()
+        .reset_index(name="count")
+    )
+    if counts.empty:
+        return None
+    counts["task_wh"] = counts["task"].astype(str) + " | " + counts["wh_name"].astype(str)
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.barplot(
+        data=counts,
+        x="task_wh",
+        y="count",
+        hue="task_mode",
+        palette={"Automated": "#3498db", "Manual": "#2ecc71"},
+        edgecolor="black",
+        ax=ax,
+    )
+    ax.set_title("Topline Counts by Task, Task Method, and Warehouse")
+    ax.set_xlabel("Task | Warehouse")
+    ax.set_ylabel("Count")
+    ax.tick_params(axis="x", rotation=45)
+    for container in ax.containers:
+        ax.bar_label(container, fmt="%d", label_type="edge", fontsize=9)
+    plt.legend(title="Task Method")
+    plt.tight_layout()
+    out = OUTPUT_DIR / "verify_topline_counts_by_task_method_warehouse.png"
+    plt.savefig(out, dpi=150, bbox_inches="tight")
+    plt.close()
+    return out
+
+
 def _plot_single_kde(subset: pd.Series, label: str, prefix: str) -> Path:
     """Plot one KDE to its own image file."""
     to_plot = _sample_for_hist(subset)
@@ -199,6 +238,10 @@ def _plot_single_kde(subset: pd.Series, label: str, prefix: str) -> Path:
 def generate_all_plots(df: pd.DataFrame, duration: pd.Series) -> list[Path]:
     """Generate individual histogram and KDE images for each cut. Returns list of paths."""
     images = []
+    # Topline counts by Task, Task Method, Warehouse
+    p = _plot_topline_counts_by_task_method_warehouse(df)
+    if p:
+        images.append(p)
     # Overall
     d = duration.dropna()
     d = d[d > 0]
@@ -529,7 +572,10 @@ def main():
     t2 = time.perf_counter()
     print("Generating histograms and KDE plots (one image per cut)...")
     images = generate_all_plots(df, duration)
-    images = sorted([p for p in images if p.exists()], key=lambda p: (not p.name.startswith("verify_histogram"), p.name))
+    images = sorted(
+        [p for p in images if p.exists()],
+        key=lambda p: (0 if "topline" in p.name else 1, not p.name.startswith("verify_histogram"), p.name),
+    )
     for p in images:
         print(f"  Saved: {p}")
     print(f"  Plots done ({time.perf_counter()-t2:.1f}s)")

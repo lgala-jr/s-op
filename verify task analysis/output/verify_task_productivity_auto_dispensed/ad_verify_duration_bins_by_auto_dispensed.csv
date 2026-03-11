@@ -1,0 +1,41 @@
+task,auto_dispensed,bin,count,pct,total
+06 Preverify,No,Less than 1 sec,71410,20.8,343483
+06 Preverify,No,1-10 sec,190643,55.5,343483
+06 Preverify,No,11-20 sec,33456,9.7,343483
+06 Preverify,No,21-30 sec,13949,4.1,343483
+06 Preverify,No,31-60 sec,17527,5.1,343483
+06 Preverify,No,1-2 min,9881,2.9,343483
+06 Preverify,No,2-3 min,3216,0.9,343483
+06 Preverify,No,3-4 min,1375,0.4,343483
+06 Preverify,No,4-5 min,813,0.2,343483
+06 Preverify,No,5+ min,1213,0.4,343483
+06 Preverify,Yes,Less than 1 sec,53130,16.1,330586
+06 Preverify,Yes,1-10 sec,193499,58.5,330586
+06 Preverify,Yes,11-20 sec,39450,11.9,330586
+06 Preverify,Yes,21-30 sec,14345,4.3,330586
+06 Preverify,Yes,31-60 sec,16301,4.9,330586
+06 Preverify,Yes,1-2 min,8690,2.6,330586
+06 Preverify,Yes,2-3 min,2433,0.7,330586
+06 Preverify,Yes,3-4 min,1117,0.3,330586
+06 Preverify,Yes,4-5 min,655,0.2,330586
+06 Preverify,Yes,5+ min,966,0.3,330586
+10 Pending Verify,No,Less than 1 sec,788,0.1,653950
+10 Pending Verify,No,1-10 sec,499420,76.4,653950
+10 Pending Verify,No,11-20 sec,101743,15.6,653950
+10 Pending Verify,No,21-30 sec,25111,3.8,653950
+10 Pending Verify,No,31-60 sec,16681,2.6,653950
+10 Pending Verify,No,1-2 min,6465,1.0,653950
+10 Pending Verify,No,2-3 min,1761,0.3,653950
+10 Pending Verify,No,3-4 min,824,0.1,653950
+10 Pending Verify,No,4-5 min,393,0.1,653950
+10 Pending Verify,No,5+ min,764,0.1,653950
+10 Pending Verify,Yes,Less than 1 sec,75,0.0,217293
+10 Pending Verify,Yes,1-10 sec,169815,78.2,217293
+10 Pending Verify,Yes,11-20 sec,29205,13.4,217293
+10 Pending Verify,Yes,21-30 sec,7110,3.3,217293
+10 Pending Verify,Yes,31-60 sec,6585,3.0,217293
+10 Pending Verify,Yes,1-2 min,2627,1.2,217293
+10 Pending Verify,Yes,2-3 min,911,0.4,217293
+10 Pending Verify,Yes,3-4 min,371,0.2,217293
+10 Pending Verify,Yes,4-5 min,194,0.1,217293
+10 Pending Verify,Yes,5+ min,400,0.2,217293
